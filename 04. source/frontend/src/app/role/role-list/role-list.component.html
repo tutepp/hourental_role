@@ -1,0 +1,38 @@
+<app-header-backend></app-header-backend>
+
+<div class="content-wrapper">
+<div class="card-body">
+  <table id="example1" class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>STT</th>
+      <th>Tên</th>
+      <th>Mô tả</th>
+      <th>Chuc nang</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let roles of role; index as i">
+      <td>{{i+1}}</td>
+
+      <td>{{roles.name}}</td>
+
+      <td>{{roles.description}}</td>
+      <td>
+        <button class="btn btn-danger" >Delete</button>
+
+        <a class="btn btn-primary" style="margin-left: 10px" routerLink="edit/{{roles.id}}">Update</a>
+
+
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+<app-footer-backend></app-footer-backend>
+<router-outlet></router-outlet>
+
+
